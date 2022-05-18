@@ -43,6 +43,15 @@ cd build/bin
 ./vigenere_decryptor[.exe] <file_path>
 ```
 
+## Example
+
+```bash
+    ./cpp_vigenere_decryptor ./test.txt
+    Vigenere Cipher Decryption
+    Key: cryptii
+    Text: mr dursley was the director of a firm called grunnings, which made drills. he was a big, beefy man with hardly any neck, although he did have a very large moustache. mrs dursley was thin and blonde and had nearly twice the usual amount of neck, which came in very useful as she spent so much of her time craning over garden fences, spying on the neighbours. the dursleys had a small son called dudley and in their opinion there was no finer boy anywhere.
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
