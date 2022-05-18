@@ -1,5 +1,5 @@
-#include <gtest/gtest.h>
 #include "utils.h"
+#include <gtest/gtest.h>
 
 TEST(UtilsModuleTests, PassInvalidPathToFile_ThrowException) {
     EXPECT_THROW(utils::read_all_file(""), std::runtime_error);
@@ -7,21 +7,21 @@ TEST(UtilsModuleTests, PassInvalidPathToFile_ThrowException) {
 
 
 TEST(UtilsModuleTests, PassText_ReturnLowerCaseText) {
-     const std::string text = "HELLO World!";
-     const std::string expected = "hello world!";
-     const auto result = utils::convert_to_lowercase(text);
-     EXPECT_EQ(expected, result);
+    const std::string text = "HELLO World!";
+    const std::string expected = "hello world!";
+    const auto result = utils::convert_to_lowercase(text);
+    EXPECT_EQ(expected, result);
 }
 
 TEST(UtilsModuleTests, PassWithNonAlphabetText_ReturnOnlyAlphabetText) {
-     std::string text = "HELLO World!@#$%^&*()";
-     std::string expected = "HELLOWorld";
-     auto result = utils::remove_non_alphabet_characters(text);
-     EXPECT_EQ(expected, result);
+    std::string text = "HELLO World!@#$%^&*()";
+    std::string expected = "HELLOWorld";
+    auto result = utils::remove_non_alphabet_characters(text);
+    EXPECT_EQ(expected, result);
 
-     text = "!@#$%^&*()";
-     result = utils::remove_non_alphabet_characters(text);
-     EXPECT_EQ(std::string(), result);
+    text = "!@#$%^&*()";
+    result = utils::remove_non_alphabet_characters(text);
+    EXPECT_EQ(std::string(), result);
 }
 
 TEST(UtilsModuleTests, PassText_ReturnEnglishFrequencyIndex) {
@@ -40,7 +40,7 @@ TEST(UtilsModuleTests, PassText_ReturnEnglishFrequencyIndex) {
     EXPECT_DOUBLE_EQ(utils::get_english_frequency_index(std::string()), 0.0);
 
     // Encrypted text
-    text = "Vyg hwzeb diqnp wqo llogu fxvt 13 ccqa uqxu.";
+    text = "vyg hwzeb diqnp wqo llogu fxvt 13 ccqa uqxu.";
     result = utils::get_english_frequency_index(text);
     EXPECT_TRUE(result < 1.0);
 }
@@ -75,5 +75,3 @@ TEST(UtilsModuleTests, PassLowercaseText_ReturnTrue) {
     auto result = utils::is_lowercase(text);
     EXPECT_TRUE(result);
 }
-
-

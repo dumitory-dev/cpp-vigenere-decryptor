@@ -36,6 +36,9 @@ namespace utils {
 	1. Counts the number of occurrences of each letter in the text.
 	2. Calculates the absolute difference between the frequencies of each letter and the English frequency.
 	3. Returns the sum of all differences.
+
+    Limitations:
+    - The function only works with English text with lowercase letters.
     * @param text String to calculate the english frequency.
     * @return double type, English frequency from text.  
     **/
@@ -47,7 +50,7 @@ namespace utils {
      * @param text  text to check
      * @return true if text is lowercase, false otherwise
      */
-    bool is_lowercase(const std::string& text) noexcept;
+    bool is_lowercase(const std::string &text) noexcept;
 
 }// namespace utils
 
