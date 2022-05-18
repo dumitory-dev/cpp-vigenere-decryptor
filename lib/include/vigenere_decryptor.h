@@ -5,9 +5,10 @@
 #include <utility>
 
 namespace vigenere_decryptor {
+
     /**
      * @brief Key-text pair
-     * 
+     *
      */
     using decrypt_result = std::pair<std::string, std::string>;
 
@@ -19,7 +20,7 @@ namespace vigenere_decryptor {
      *  - Cipher text must contain alphabetical characters
      * @param text Text to decrypt. (Must be )
      * @param key Key to decrypt the text.
-     * @return decrypt_result 
+     * @return decrypt_result
      */
     decrypt_result decrypt(const std::string &cipher_text);
 

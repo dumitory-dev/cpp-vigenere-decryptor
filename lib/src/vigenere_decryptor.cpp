@@ -9,18 +9,16 @@
 #include "utils.h"
 #include "vigenere_decryptor.h"
 
-using namespace std;
-
 namespace vigenere_decryptor {
 
 
     /**
-     * @brief The function encrypts text using the vigenera algorithm 
+     * @brief The function encrypts text using the vigenera algorithm
      * Limitations:
      * - The key and text must be a string of lowercase letters
      * @param text Text to encrypt.
      * @param key Key to encrypt the text.
-     * @return std::string encrypt_result 
+     * @return std::string encrypt_result
      */
     std::string encrypt(const std::string &text, const std::string &key) {
         if (text.empty() || key.empty())
@@ -44,15 +42,15 @@ namespace vigenere_decryptor {
         return result;
     }
 
-    /** 
+    /**
      * @brief The function:
      * 1. Gets the inverse key from the normal key
-     * 2. It calls the encrypt method with the inverse key 
-     * (so we get the decrypted text, decryption is encryption with the inverse key)   
+     * 2. It calls the encrypt method with the inverse key
+     * (so we get the decrypted text, decryption is encryption with the inverse key)
      *  @param text Text to decrypt.
-     *  @param key Key to decrypt the text. 
-     * 
-     *  @return std::string decrypt_result 
+     *  @param key Key to decrypt the text.
+     *
+     *  @return std::string decrypt_result
      */
     std::string decrypt_with_key(const std::string &text, const std::string &key) {
         if (text.empty() || key.empty())
@@ -94,7 +92,7 @@ namespace vigenere_decryptor {
         if (text_with_only_alpha_chars.empty())
             throw std::invalid_argument("Decrypt: Unsupported text!");
 
-        std::vector<string> best_keys{};
+        std::vector<std::string> best_keys{};
 
         for (auto key_length = constants::MIN_PASSWORD_LEN; key_length <= constants::MAX_PASSWORD_LEN; ++key_length) {
             auto key = std::string(key_length, '\0');

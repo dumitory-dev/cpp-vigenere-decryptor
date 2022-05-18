@@ -4,9 +4,9 @@
 namespace constants {
 
     /**
-     * @brief Letter frequency is the number of times letters 
+     * @brief Letter frequency is the number of times letters
      * of the alphabet appear on average in written language
-     * 
+     *
      */
     constexpr inline double ENGLISH_LETTER_FREQUENCY[] = {
             0.0749,
@@ -45,9 +45,10 @@ namespace constants {
 
     /**
     * @brief Maximum file size in bytes.
-    * 
+    *
     */
     constexpr inline auto MAX_FILE_SIZE = 1024u * 1024u;// 1MB
+
 }// namespace constants
 
 #endif// CPP_VIGENERE_DECRYPTOR_CONSTANTS_H
