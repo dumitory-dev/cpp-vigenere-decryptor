@@ -22,12 +22,12 @@ namespace vigenere_decryptor {
      * @param key Key to decrypt the text.
      * @return decrypt_result
      */
-    decrypt_result decrypt(const std::string &cipher_text);
+    decrypt_result decrypt(std::string_view cipher_text);
 
 #ifdef TESTS_ENABLED
-    std::string encrypt(const std::string &text, const std::string &key);
-    std::string decrypt_with_key(const std::string &text, const std::string &key);
-    decrypt_result decrypt(const std::string &cipher_text);
+    std::string encrypt(std::string_view text, std::string_view key);
+    std::string decrypt_with_key(std::string_view text, std::string_view key);
+    decrypt_result decrypt(std::string_view cipher_text);
 #endif
 
 }// namespace vigenere_decryptor

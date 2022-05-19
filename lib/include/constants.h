@@ -8,7 +8,7 @@ namespace constants {
      * of the alphabet appear on average in written language
      *
      */
-    constexpr inline double ENGLISH_LETTER_FREQUENCY[] = {
+    constexpr inline double english_letter_frequency[] = {
             0.0749,
             0.0129,
             0.0354,
@@ -37,17 +37,17 @@ namespace constants {
             0.0004,
     };
 
-    constexpr inline auto ENGLISH_ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-    constexpr inline auto ENGLISH_ALPHABET_LEN = 26u;
+    constexpr inline auto english_alphabet = "abcdefghijklmnopqrstuvwxyz";
+    constexpr inline auto english_alphabet_len = 26u;
 
-    constexpr inline auto MAX_PASSWORD_LEN = 12u;
-    constexpr inline auto MIN_PASSWORD_LEN = 2u;
+    constexpr inline auto max_password_len = 12u;
+    constexpr inline auto min_password_len = 2u;
 
     /**
     * @brief Maximum file size in bytes.
     *
     */
-    constexpr inline auto MAX_FILE_SIZE = 1024u * 1024u;// 1MB
+    constexpr inline auto max_file_size = 1024u * 1024u;// 1MB
 
 }// namespace constants
 
