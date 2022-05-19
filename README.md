@@ -2,7 +2,7 @@
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
-[![Build Status](https://github.com/dumitory-dev/cpp-vigenere-decryptor/workflows/build/badge.svg)](https://github.com/dumitory-dev/cpp-vigenere-decryptor/actions)
+![GitHub CI](https://github.com/dumitory-dev/cpp-vigenere-decryptor/actions/workflows/build.yml/badge.svg)
 
 The program allows you to decrypt the Vigenere cipher without knowing the key.
 
