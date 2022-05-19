@@ -1,5 +1,7 @@
 # The Vigenere Decryptor
 
+![Build Status](https://github.com/dumitory-dev/cpp-vigenere-decryptor/blob/master/.github/workflows/build.yml/badge.svg)
+
 The program allows you to decrypt the Vigenere cipher without knowing the key.
 
 Frequency analysis method is used for decoding.
@@ -11,9 +13,9 @@ Frequency analysis method is used for decoding.
 - Only English text
 - The key must also consist of English letters
 - Maximum file size 1 megabyte
-- The method is NOT effective for small texts. (It is recommended that the length of the cipher is more than 500 characters)
+- The method is NOT effective for small texts. (It is recommended that the length of the cipher is more than 500
+  characters)
 - Key length from 2 to 12 characters
-
 
 ## Build
 
@@ -31,6 +33,7 @@ cmake --build .
 ```
 
 For run test(after build):
+
 ```bash
 cd build
 ctest
@@ -53,9 +56,11 @@ cd build/bin
 ```
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
