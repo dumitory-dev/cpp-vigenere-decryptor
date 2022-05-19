@@ -25,6 +25,12 @@ You need a compiler that supports C++ 17.
 
 The project uses the CMake build system, version 3.14 or higher.
 
+### Windows
+
+You can also open a project in Visual Studio as a folder. (Must have tools for building cmake projects installed)
+
+### General
+
 For build project:
 
 ```bash
