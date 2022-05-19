@@ -10,7 +10,7 @@
 namespace utils {
 
     std::string read_all_file(std::string_view path_to_file) {
-        std::ifstream file{path_to_file};
+        std::ifstream file{path_to_file.data()};
         if (!file.is_open()) {
             throw std::runtime_error("Could not open file: " + std::string(path_to_file));
         }
