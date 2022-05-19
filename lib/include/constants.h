@@ -43,6 +43,8 @@ namespace constants {
     constexpr inline auto max_password_len = 12u;
     constexpr inline auto min_password_len = 2u;
 
+    constexpr inline auto min_text_len = 12u;
+
     /**
     * @brief Maximum file size in bytes.
     *
