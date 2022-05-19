@@ -37,7 +37,7 @@ cmake --build .
 For run test(after build):
 
 ```bash
-cd build
+cd build/tests
 ctest
 ```
 
