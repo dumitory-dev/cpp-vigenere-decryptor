@@ -15,6 +15,7 @@ Frequency analysis method is used for decoding.
 - Only English text
 - The key must also consist of English letters
 - Maximum file size 1 megabyte
+- Minimum text len is 12 alpha symbols
 - The method is NOT effective for small texts. (It is recommended that the length of the cipher is more than 500
   characters)
 - Key length from 2 to 12 characters
