@@ -97,7 +97,9 @@ namespace vigenere_decryptor {
         if (text_with_only_alpha_chars.empty())
             throw std::invalid_argument("Decrypt: Unsupported text!");
 
-
+        if (text_with_only_alpha_chars.size() < constants::min_text_len)
+            throw std::invalid_argument("Decrypt: Small input text!");
+        
         const auto key_comparator = [&](const auto &key1, const auto &key2) {
             const auto decrypt_first_key = decrypt_with_key(text_with_only_alpha_chars, key1);
             const auto decrypt_second_key = decrypt_with_key(text_with_only_alpha_chars, key2);
@@ -120,7 +122,8 @@ namespace vigenere_decryptor {
 
                 auto shifts = std::map<char, double>{};
                 for (auto key_char: std::string_view{constants::english_alphabet}) {
-                    shifts[key_char] = utils::get_english_frequency_index(decrypt_with_key(letters, std::string(1, key_char)));
+                    const auto key_str = std::string(1, key_char);
+                    shifts[key_char] = utils::get_english_frequency_index(decrypt_with_key(letters, key_str));
                 }
 
                 key[key_index] = std::min_element(shifts.cbegin(), shifts.cend(), [](const auto &lhs, const auto &rhs) {
