@@ -18,8 +18,7 @@ namespace vigenere_decryptor {
      *  - Cipher text must not be empty
      *  - Cipher text must contain only lowercase letters(!)
      *  - Cipher text must contain alphabetical characters
-     * @param text Text to decrypt. (Must be )
-     * @param key Key to decrypt the text.
+     * @param text Text to decrypt. (Must be lowercase)
      * @return decrypt_result
      */
     decrypt_result decrypt(std::string_view cipher_text);

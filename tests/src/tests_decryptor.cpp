@@ -72,7 +72,7 @@ TEST(VigenereDecryptor, PassBigEncryptedTextWithoutKey_ReturnDecryptedText) {
     EXPECT_EQ(expected_text, text);
 }
 
-TEST(VigenereDecryptor, PassInvalidText_ReturnDecryptedText) {
+TEST(VigenereDecryptor, PassInvalidText_ThrowInvalidArgument) {
     // Without alphabet letters
     std::string invalid_text = "12312312334452345";
     EXPECT_THROW(vigenere_decryptor::decrypt(invalid_text);, std::invalid_argument);
